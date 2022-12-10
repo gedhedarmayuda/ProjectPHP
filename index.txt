@@ -1,0 +1,24 @@
+<?php
+
+$makanan = "Burger";
+$minuman = "Sprite";
+$snack = "Kentang";
+
+$request = $_SERVER['REQUEST_URI'];
+switch ($request) {
+    case '/makanan':
+        echo ("Pesanan anda adalah: " . $makanan);
+        break;
+    case '/minuman':
+        echo ("Pesanan anda adalah: " . $minuman);
+        break;
+    case '/snack':
+        echo ("Pesanan anda adalah: " . $snack);
+        break;
+    case '/':
+        echo ("Pesanan anda adalah:" . $snack);
+        break;
+    default:
+        echo ("Anda belum memesan");
+        break;
+}
